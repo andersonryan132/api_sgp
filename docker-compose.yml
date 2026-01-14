@@ -1,0 +1,16 @@
+version: "3.9"
+
+services:
+  sgp_api:
+    build: .
+    container_name: sgp_disconnect_api
+    restart: always
+    ports:
+      - "8000:8000"
+    environment:
+      API_TOKEN: "COLOQUE_SEU_TOKEN_AQUI"
+      SGP_USER: "SEU_USUARIO_SGP"
+      SGP_PASS: "SUA_SENHA_SGP"
+    volumes:
+      # volume para persistir cookies de sessão
+      - sgp_cookies:/app
