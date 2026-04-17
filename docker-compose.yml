@@ -5,9 +5,10 @@ services:
     restart: always
     ports:
       - "8000:8000"
-    env_file:
-      - .env
     environment:
+      API_TOKEN: "${API_TOKEN}"
+      SGP_USER: "${SGP_USER}"
+      SGP_PASS: "${SGP_PASS}"
       COOKIES_FILE: "/cookies/sgp_cookies.pkl"
     volumes:
       - sgp_cookies:/cookies
