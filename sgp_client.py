@@ -104,7 +104,7 @@ def add_cliente_contact(
     contato: str,
     tipo: str = "WHATSAPP",
     inscricoes: tuple[int, ...] = (15, 16, 32, 33, 34),
-    observacao: str = "Contato atualizado pelo WPP IA",
+    observacao: str = "Contato atualizado por WPP IA",
 ) -> dict:
     s = get_session_logged()
     edit_url = f"{BASE_URL}/admin/cliente/{cliente_id}/edit/"
